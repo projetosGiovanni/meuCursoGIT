@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <title>arquivo git</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
+
+<head>
+    <title>arquivo git</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
     <h1>Curso de GIT</h1>
-    <p>Author: Giovanni Nicoletti,  email: Giovanni Nicoletti@pge.govrn </p>
-    <br>    
-    O Git permite que realizemos o controle de versão de um repositório, porém um repositório deve ser associado diretamente com uma pasta no sistema de arquivos. 
-    Portanto, não podemos adicionar arquivos localizados em pastas diferentes que não estejam associadas ao mesmo repositório.
+    <p>Author: Giovanni Nicoletti, email: Giovanni Nicoletti@pge.govrn </p>
+    <br> O Git permite que realizemos o controle de versão de um repositório, porém um repositório deve ser associado diretamente
+    com uma pasta no sistema de arquivos. Portanto, não podemos adicionar arquivos localizados em pastas diferentes que não
+    estejam associadas ao mesmo repositório.
 
     <h4>Principais comandos citados na aula 2</h4>
     <ul>
@@ -22,15 +24,41 @@
         <li>git commit</li>
         <li>git log</li>
     </ul>
-    
+
     <h4>Principais comandos citados na aula 3</h4>
     <ul>
         <li>git log</li>
         <li>git whatchanged -p</li>
         <li>Criando repositorio em https://github.com/</li>
-        <li>git remote</li>
+        <li>git remote (cria um espelhamento da pasta do GIT na maquina local -> para o repositorio WEB do github. 
+            git remote add origin https://github.com/projetosGiovanni/meuCursoGIT)
+        </li>
+        <li>git push origin master (envia demais alterações para o servidor 'origin' na branch 'master')</li>
+        <li>git clone</li>
+        <p>Exemplo: git clone https://github.com/projetosGiovanni/meuCursoGIT.git</p>
     </ul>
 
+    <h4>Aula 4 : Organização do trabalho com *branches*</h4>
+    <ul>
+        <li>git clone</li>
+        <p>Exemplo: git clone https://github.com/projetosGiovanni/meuCursoGIT.git</p>
+        <li>git branch</li>
+        <li>git branch design (Criando de branches)</li>
+        <li>git checkout design (mudando da branch master p/ design)</li>
+        <li>git push -u origin design (com -u podemos indicar o caminho (track) da branch remota para a nossa branch local)
+        <img src="img\branch_local_e_remota_linkado.png" alt="img da branch local ligada à branch remota">
+        </li>
+        <li>git branch (lista as branches da minha maquina)</li>
+
+        <li>git branch -r (lista as branches romotas)</li>
+
+        <li>git branch -a (lista todas as branches, locais e remotas)</li>
+
+        <li>git branch -t design origin/design (cria branch local design atrelada a branch remota origin/design</li>
+
+        <li>git branch -d ( remove uma branch, porém somente se ela estiver sincronizada com outra. 
+            Senão, é necessário forçar com a opção "-D" )</li>
+    </ul>
 
     <div id="git_init">
         <h3>git init</h3>
@@ -43,6 +71,7 @@
         git config --global user.email "giovanni.nic@gmail.com"
         </pre>
     </div>
-        
-    </body>
+
+</body>
+
 </html>
